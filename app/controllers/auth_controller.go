@@ -45,6 +45,7 @@ func (c AuthController) Login() revel.Result {
 		data["data"] = "Username or Password is not correct"
 		return c.RenderJSON(data)
 	}
+
 	// create token
 	// token, errCreate := jwt.Create(username)
 	// if errCreate != nil {

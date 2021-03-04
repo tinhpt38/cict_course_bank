@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"github.com/revel/revel"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"net/http"
 )
@@ -64,24 +65,31 @@ func (c UserController) Register() revel.Result{
 	err := json.NewDecoder(c.Request.GetBody()).Decode(&user)
 	c.Response.Status = http.StatusBadRequest
 	data := make(map[string]interface{})
+	ctx := context.Background()
+	data["status"] = "error"
 	if err != nil{
-		data["status"] = "error"
 		data["data"] = "Status Bad Request"
 		c.RenderJSON(data)
 	}
+	filter := bson.D{primitive.E{Key: "username", Value: user.Username}}
+	isExistUser := &models.User{}
+	_ = database.UserCollection.FindOne(ctx,filter).Decode(&isExistUser)
+	if isExistUser != nil{
+		data["data"] = "Username is already exist"
+		return c.RenderJSON(data)
+	}
 	hashed ,err := models.Hash(user.Password)
 	if err != nil{
-		data["status"] = "error"
 		data["data"] = "Could hash password"
 		c.RenderJSON(data)
 	}
 	user.Password = hashed
-	ctx := context.Background()
 	_, err = database.UserCollection.InsertOne(ctx,user)
-
+	ctx.Done()
 	if err != nil{
 		data["status"] = "error"
 		data["data"] = "Could insert user"
+		return c.RenderJSON(data)
 	}
 
 	c.Response.Status = http.StatusCreated
