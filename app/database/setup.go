@@ -12,7 +12,7 @@ var UserCollection *mongo.Collection
 var ctx = context.TODO()
 
 func InitDB(uri string) error {
-	//clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
+	//clientOptions := options.Client().ApplyURI("mongodb://localhopst:27017")
 	clientOptions := options.Client().ApplyURI(uri)
 	client, err := mongo.Connect(ctx,clientOptions)
 	if err != nil{

@@ -10,6 +10,8 @@ module:testrunner
 GET     /                                       App.Index
 GET     /users                                  UserController.Index
 POST    /users/register                         UserController.Register
+GET     /users/:id                               UserController.GetUserFormID
+GET     /users/delete/:id                         UserController.Delete
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
