@@ -157,6 +157,21 @@ func (c UserController) GetUserFormID(id string) revel.Result {
 	data["status"] = "success"
 	data["data"] = result
 	return c.RenderJSON(data)
-
-
 }
+
+//func (c UserController) Update() revel.Result{
+//	defer c.Request.Destroy()
+//	user := &models.User{}
+//	err := json.NewDecoder(c.Request.GetBody()).Decode(&user)
+//	c.Response.Status = http.StatusBadRequest
+//	data := make(map[string]interface{})
+//	ctx := context.Background()
+//	data["status"] = "error"
+//	if err != nil {
+//		data["data"] = "Status Bad Request"
+//		c.RenderJSON(data)
+//	}
+//	update := bson.D{primitive.E{"$set",user}}
+//	err := database.UserCollection.UpdateOne(ctx,update)
+//
+//}
