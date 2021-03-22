@@ -8,7 +8,8 @@ import (
 )
 
 var UserCollection *mongo.Collection
-var CourseCollection * mongo.Collection
+var CourseCollection *mongo.Collection
+var CategoryCollection *mongo.Collection
 
 var ctx = context.TODO()
 
@@ -26,5 +27,6 @@ func InitDB(uri string) error {
 	database := client.Database("cict-quiz-api")
 	UserCollection = database.Collection("user")
 	CourseCollection = database.Collection("course")
+	CategoryCollection = database.Collection("category")
 	return nil
 }

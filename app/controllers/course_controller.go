@@ -16,6 +16,10 @@ type CourseController struct {
 }
 
 func (c CourseController) Index() revel.Result {
+	return c.RenderText("Inndex")
+}
+
+func (c CourseController) GetAll() revel.Result {
 	defer c.Request.Destroy()
 	result := []models.Course{}
 	ctx := context.Background()

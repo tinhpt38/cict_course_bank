@@ -19,6 +19,10 @@ type UserController struct {
 }
 
 func (c UserController) Index() revel.Result {
+	return c.RenderText("Index")
+}
+
+func (c UserController) GetAll() revel.Result {
 	defer c.Request.Destroy()
 	result := []models.User{}
 	ctx := context.Background()

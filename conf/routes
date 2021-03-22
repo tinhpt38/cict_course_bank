@@ -8,14 +8,18 @@ module:testrunner
 
 
 GET     /                                       App.Index
-GET     /users                                  UserController.Index
+GET     /users                                  UserController.GetAll
 POST    /users/register                         UserController.Register
 GET     /users/:id                              UserController.GetUserFormID
 GET     /users/delete/:id                       UserController.Delete
 
-GET     /courses                                CourseController.Index
+GET     /courses                                CourseController.GetAll
 POST    /courses/insert/one                     CourseController.InsertOne
 POST    /courses/insert/range                   CourseController.InsertMany
+
+
+GET     /categories                             CategoryController.GetAll
+POST    /categories/create                      CategoryController.Create
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
