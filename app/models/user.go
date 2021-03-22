@@ -14,9 +14,9 @@ type User struct {
 	RoleID string `bson:"role_id" json:"role_id"`
 	TokenID string `bson:"token_id" json:"token_id"`
 	Avatar string 	`bson:"avatar" json:"avatar"`
-	CreateAt string `bson:"create_at" json:"create_at"`
-	DeleteAt string `bson:"delete_at" json:"delete_at"`
-	UpdateAt string `bson:"update_at" json:"update_at"`
+	CreatedAt string `bson:"created_at" json:"created_at"`
+	DeletedAt string `bson:"deleted_at" json:"deleted_at"`
+	UpdatedAt string `bson:"updated_at" json:"updated_at"`
 }
 
 func Hash(password string)(string,error){

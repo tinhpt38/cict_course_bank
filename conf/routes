@@ -14,6 +14,8 @@ GET     /users/:id                              UserController.GetUserFormID
 GET     /users/delete/:id                       UserController.Delete
 
 GET     /courses                                CourseController.Index
+POST    /courses/insert/one                     CourseController.InsertOne
+POST    /courses/insert/range                   CourseController.InsertMany
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

@@ -53,7 +53,7 @@ func (c UserController) Index() revel.Result {
 		data["data"] = mongo.ErrNoDocuments
 		return c.RenderJSON(data)
 	}
-
+	c.Response.Status = http.StatusOK
 	data["status"] = "success"
 	data["data"] = result
 
