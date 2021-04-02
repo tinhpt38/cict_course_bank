@@ -12,8 +12,13 @@ import (
 	"net/http"
 )
 
+//login
 type AuthController struct {
 	* revel.Controller
+}
+
+func (c AuthController) Index() revel.Result{
+	return revel.RenderHTMLResult{};
 }
 
 func (c AuthController) Login() revel.Result {

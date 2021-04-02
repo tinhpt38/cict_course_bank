@@ -14,6 +14,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
+//user
 type UserController struct {
 	*revel.Controller
 }
