@@ -6,7 +6,7 @@
 module:testrunner
 # module:jobs
 
-
+# API
 GET     /                                           App.Index
 GET     /api/users                                  UserController.GetAll
 POST    /api/users/register                         UserController.Register
@@ -20,6 +20,13 @@ POST    /api/courses/insert/range                   CourseController.InsertMany
 
 GET     /api/categories                             CategoryController.GetAll
 POST    /api/categories/create                      CategoryController.Create
+
+
+
+# View
+
+GET /login/                                         AuthController.Index
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

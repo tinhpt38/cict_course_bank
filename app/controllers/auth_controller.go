@@ -18,7 +18,7 @@ type AuthController struct {
 }
 
 func (c AuthController) Index() revel.Result{
-	return revel.RenderHTMLResult{};
+	return c.Render()
 }
 
 func (c AuthController) Login() revel.Result {
@@ -68,3 +68,30 @@ func (c AuthController) Login() revel.Result {
 	data["data"] = body
 	return c.RenderJSON(data)
 }
+
+
+func (c AuthController)ActionLogin() bool {
+
+	username := c.Params.Form.Get("username")
+	password := c.Params.Form.Get("password")
+	login := &models.Login{Username: username, Password: password}
+
+	if govalidator.IsNull(login.Username) || govalidator.IsNull(login.Password){
+		return false
+	}
+
+	result := &models.User{}
+	ctx := context.Background()
+	filter := bson.D{primitive.E{Key: "username", Value: login.Username}}
+
+	if err := database.UserCollection.FindOne(ctx,filter).Decode(&result); err != nil{
+		return false
+	}
+
+	if err := models.CheckHashAndPassword(login.Password,result.Password); err !=nil{
+		return false
+	}
+
+	return true
+}
+
