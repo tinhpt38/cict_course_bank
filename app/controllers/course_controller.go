@@ -14,7 +14,7 @@ import (
 type CourseController struct {
 	*revel.Controller
 }
-//course
+
 func (c CourseController) Index() revel.Result {
 	return c.RenderText("Inndex")
 }

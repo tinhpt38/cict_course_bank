@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"net/http"
 )
-//categories
+
 type CategoryController struct {
 	*revel.Controller
 }

@@ -8,7 +8,7 @@ type Question struct {
 	CorrectCodes []string	`bson:"correct_codes" json:"correct_codes"`
 	Level Level `bson:"level" json:"level"`
 	Answers []Answer `bson:"answers" json:"answers"`	
-	//ModuleID string	`bson:"module_id" json:"module_id"`
+	ModuleID string	`bson:"module_id" json:"module_id"`
 	Content Content  `bson:"content" json:"content"`
 
 }

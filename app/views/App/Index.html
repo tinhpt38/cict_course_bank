@@ -1,19 +1,59 @@
-{{set . "title" "Home"}}
 {{template "header.html" .}}
 
-<header class="jumbotron" style="background-color:#A9F16C">
-  <div class="container">
-    <div class="row">
-      <h1>It works!</h1>
-      <p></p>
-    </div>
-  </div>
-</header>
+<link rel="stylesheet" href="/public/css/style.css">
 
-<div class="container">
-  <div class="row">
-    <div class="span6">
-      {{template "flash.html" .}}
+
+
+<div id="login">
+  <div class="container">
+    <div class="logo_are">
+      <a class="btn_logo" href=""><img class="img_logo" src="/public/img/logo.png" alt=""></a>
+    </div>
+    <div id="login-row" class="row justify-content-center align-items-center">
+      <div id="login-column" class="col-md-6">
+        <div class="col-md-12">
+          {{if or .errors .flash.error}}
+          <div class="alert alert-danger">
+          {{if .flash.error}}
+            {{.flash.error}}
+            {{end}}
+            {{if .errors}}
+<!--            <ul style="margin-top:6px;">-->
+<!--              {{range .errors}}-->
+<!--              <li>{{.}}</li>-->
+<!--              {{end}}-->
+<!--            </ul>-->
+            {{end}}
+          </div>
+          {{end}}
+        </div>
+        <div class="text-center">
+          <h1>Sign in to course bank</h1>
+        </div>
+
+        <div id="login-box" class="col-md-12">
+          <form id="login-form" class="form" action="/App/LoginUser" method="GET">
+            <div class="form-group">
+              <label for="username" >Username or email address</label><br>
+              <input type="text" name="username" id="username" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password" type="password">Password</label><br>
+              <input type="text" name="password" id="password" class="form-control">
+            </div>
+            <div class="form-sigin">
+              <form action="/App/Hello" method="GET">
+                <input type="submit" value="Sign in" />
+              </form>
+            </div>
+          </form>
+        </div>
+        <div id="helping" class="col-md-12">
+          <form id="help" class="text-center">
+            <a href="#" class="btn btn-contact btn-md">No account? Contact to help</a>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

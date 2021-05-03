@@ -16,5 +16,6 @@
         <method importPath="go.mongodb.org/mongo-driver/mongo" receiver="*Cursor" name="Close" />
       </methods>
     </inspection_tool>
+    <inspection_tool class="XmlDuplicatedId" enabled="false" level="ERROR" enabled_by_default="false" />
   </profile>
 </component>

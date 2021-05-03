@@ -1,0 +1,234 @@
+body {
+    margin-top: 50px;
+    background-color:#F2F2F2;
+
+}
+/*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
+
+.navbar-brand img{
+    height: 40px;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 22px 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+
+
+/* Side Navigation */
+
+@media(min-width:668px) {
+    .side-nav {
+        position: fixed;
+        top: 60px;
+        left: 225px;
+        width: 100px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        border-top: 1px rgba(0, 0, 0, .5) solid;
+        overflow-y: auto;
+        background-color: #222;
+        /*background-color: #5A6B7D;*/
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+}
+.col-md-4{
+    margin-top:20px;
+}
+.col-md-4 input{
+    margin-top:20px;
+    margin-left:0px;
+    border:1px solid #000;
+    border-radius:6px;
+
+}
+
+.col-md-8 {
+    margin-top:40px;
+}
+p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+table,th{
+    margin-top: 20px;
+    border-bottom: #000000 solid 1px;
+}
+body {
+    margin-top: 50px;
+}
+/*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
+
+.navbar-brand img{
+    height: 40px;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 22px 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+
+
+/* Side Navigation */
+
+@media(min-width:668px) {
+    .side-nav {
+        position: fixed;
+        top: 60px;
+        left: 225px;
+        width: 100px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        border-top: 1px rgba(0, 0, 0, .5) solid;
+        overflow-y: auto;
+        background-color: #222;
+        /*background-color: #5A6B7D;*/
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+}
+.col-md-4{
+    margin-top:20px;
+}
+.col-md-4 input{
+    margin-top:20px;
+    margin-left:0px;
+}
+
+.col-md-8 {
+    margin-top:40px;
+}
+p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+table,th{
+    margin-top: 20px;
+    border-bottom: #000000 solid 1px;
+}
+
+.dropbtn {
+    background-color: #ffffff;
+    color: black;
+    font-weight: 100;
+    width:340px;
+    padding:10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display:flex;
+    margin-top:20px;
+}
+
+/* Dùng trong <div> để định vị nội dung thả xuống */
+.dropdown {
+    position: relative;
+    display:inline-block;
+
+}
+.dropdown .dropdown-content{
+    display:none;
+    width:100px;
+    position: absolute;
+    margin-left:29px;
+    background-color: #ffffff;
+    min-width: 300px;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/*/ * Nội dung thả xuống (Ẩn theo mặc định) * /*/
+/*.dropdown-content {*/
+
+/*}*/
+
+/*/ * Liên kết bên trong danh sách thả xuống * /*/
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*/ * Thay đổi định dạng của liên kết thả xuống khi di chuột qua * /*/
+.dropdown-content a:hover {
+    background-color: #1ac8ca;
+    color: white;
+}
+
+/*/ * Hiển thị menu thả xuống khi di chuột * /*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*/ * Thay đổi màu nền của nút thả xuống khi nội dung được hiển thị * /*/
+.dropdown:hover .dropbtn {
+
+}

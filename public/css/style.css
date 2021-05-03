@@ -1,0 +1,89 @@
+body {
+    margin:50px;
+    padding: 0;
+    background-color: #FFFFFF;
+    height: 90vh;
+}
+#login.text-info {
+    color:#1d1c1c;
+    font-size:14px;
+}
+
+.img_logo {
+    height: 70px;
+    margin: 50px 0 0 500px;
+}
+
+#login .container #login-row #login-column #login-box {
+    margin:5% 0% 3% 77%;
+    max-width: 270px;
+    height: 244px;
+    border: 1px solid #080808;
+    background-color: #F6F8FA;
+    border-radius: 2% 2%;
+}
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -50px;
+}
+#login #hinhanh{
+    position:absolute; width:100%; height:100%
+
+}
+img.img_logo {
+    width: 50%;
+    margin: 0% 0% 0% 17%;
+}
+
+.logo_are {
+    padding: 0% 42%;
+}
+a.btn.btn-info.btn-md {
+    background: #101010;
+    width: 34px;
+    color: #ffff;
+    border-radius: 8px;
+    margin: 8% 10%;
+}
+label{
+    color:#000;
+    font-size:13px;
+    width:max-content;
+}
+div#login-box {
+    background: #F6F8FA;
+}
+h1 {
+    color:#000;
+    font-size: 13px;
+    width:max-content;
+    margin:6% 0% 0% 90%;
+
+}
+
+div#helping {
+    border: 1px solid;
+    border-radius: 12px;
+    margin:0% 0% 20% 80%;
+    height: 40px;
+    padding: 0%;
+    font-size:14px;
+    color:#000;
+    width:42%;
+}
+#login.text-info{
+    color:#000;
+}
+
+input[type="submit"] {
+    background: #6677ec;
+    font-size: 14px;
+    width: 150px;
+    border-radius: 6px;
+    color: white;
+    margin: 4% 0% 2% 12%;
+}
+input[type="submit"] {}

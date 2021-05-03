@@ -1,0 +1,122 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link type="text/css" rel="stylesheet" href="/public/css/bootstrap-3.3.6.min.css">
+<link type="text/css" rel="stylesheet" href="/public/css/question.css">
+<!--<link rel="stylesheet" href="/public/js/java.js">-->
+
+<!--<div id="throbber" style="display:none; min-height:120px;"></div>-->
+<!--<div id="noty-holder"></div>-->
+<!--<div id="wrapper">-->
+<div class="container">
+
+    <div class="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://bryanrojasq.wordpress.com">
+                    <img src="/public/img/logo-question.png" alt="logo-question">
+                </a>
+            </div>
+
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li>
+                    <a data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
+
+                </li>
+            </ul>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <!--    <div class="row1 col-sm-4">-->
+        <div class="col-md-4 sidebar" id="content">
+            <h3>Search</h3>
+            <input class="form-control" id="exampleInput"  placeholder="Search">
+            <p>Chuyên mục</p>
+                    <div class="dropdown">
+                        <button class="dropbtn">Ôn tập chứng chỉ công nghệ thông tin cơ bản</button>
+                        <div class="dropdown-content">
+                            <a href="#">Bộ câu hỏi Word</a>
+                            <a href="#">Bộ câu hỏi PowerPoint</a>
+                            <a href="#">Bộ câu hỏi Excel</a>
+                            <a href="#">Bộ câu hỏi Internet</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Bộ câu hỏi quốc phòng</button>
+                        <div class="dropdown-content">
+                            <a href="#">Quốc Phòng 1</a>
+                            <a href="#">Quốc phòng 2</a>
+                            <a href="#">Quốc phòng 3</a>
+                            <a href="#">Quốc phòng 4</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-8 sidebar" id="content1">
+                    <!--        <div class="row2 col-sm-8">-->
+                    <button style="background-color: #02D8FE">
+                        <span class="btn"> Thêm câu hỏi mới </span>
+                    </button>
+                    <div class="table-responsive">
+
+                        <!--Table-->
+                        <table class="table">
+
+
+
+                            <!--Table body-->
+
+                            <tr>
+                                <th scope="row">Question</th>
+                                <th>Category</th>
+                                <th>Type</th>
+                                <th>Level</th>
+                                <th>Status</th>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">What is Lorem Ipsum?</th>
+                                <td>Bộ câu hỏi word</td>
+                                <td>Single</td>
+                                <td>1</td>
+                                <td>Active</td>
+                            </tr>
+
+
+                            <!--Table body-->
+
+                        </table>
+                        <!--Table-->
+
+                    </div>
+                </div>
+                <!-- Kết thúc cột phải -->
+
+            </div>
+
+        </div>
+</html>
+{{template "footer.html" .}}
